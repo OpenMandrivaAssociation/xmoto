@@ -1,5 +1,5 @@
 %define name xmoto
-%define version 0.2.7
+%define version 0.3.0
 %define release %mkrel 1
 
 Summary: A challenging 2D motocross platform game
@@ -14,9 +14,9 @@ License: GPL
 Group: Games/Arcade
 Url: http://xmoto.sourceforge.net/
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
-BuildRequires: mesaglu-devel ode-devel SDL-devel SDL_mixer-devel lua-devel
+BuildRequires: mesaglu-devel ode-devel SDL-devel SDL_mixer-devel SDL_ttf-devel
 BuildRequires: curl-devel jpeg-devel png-devel bzip2-devel ImageMagick
-BuildRequires: automake
+BuildRequires: automake lua-devel sqlite-devel
 Requires: soundwrapper
 
 %description
