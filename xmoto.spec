@@ -16,7 +16,7 @@ Url: http://xmoto.sourceforge.net/
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: mesaglu-devel ode-devel SDL-devel SDL_mixer-devel SDL_ttf-devel
 BuildRequires: curl-devel jpeg-devel png-devel bzip2-devel ImageMagick
-BuildRequires: automake lua-devel sqlite-devel
+BuildRequires: automake lua-devel sqlite3-devel
 Requires: soundwrapper
 
 %description
