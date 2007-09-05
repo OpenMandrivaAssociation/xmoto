@@ -1,12 +1,12 @@
 %define name xmoto
-%define version 0.3.2
+%define version 0.3.3
 %define release %mkrel 1
 
 Summary: A challenging 2D motocross platform game
 Name: %{name}
 Version: %{version}
 Release: %{release}
-Source0: http://prdownloads.sourceforge.net/xmoto/%{name}-%{version}-src.tar.bz2
+Source0: http://download.tuxfamily.org/xmoto/xmoto/%{version}/%{name}-%{version}-src.tar.bz2
 Source1: %{name}.png
 # (blino) allow to override localedir
 Patch1: xmoto-0.2.2-locale.patch
@@ -51,7 +51,7 @@ Exec=soundwrapper %_gamesbindir/%{name}
 Icon=%{name}
 Terminal=false
 Type=Application
-Categories=Game;ArcadeGame;X-MandrivaLinux-MoreApplications-Games-Arcade;
+Categories=Game;ArcadeGame;
 EOF
 
 mkdir -p $RPM_BUILD_ROOT/{%{_liconsdir},%{_iconsdir},%{_miconsdir}}
