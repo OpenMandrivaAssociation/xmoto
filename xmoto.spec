@@ -13,6 +13,7 @@ Patch1: xmoto-0.2.2-locale.patch
 License: GPL
 Group: Games/Arcade
 Url: http://xmoto.sourceforge.net/
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: mesaglu-devel ode-devel SDL-devel SDL_mixer-devel SDL_ttf-devel
 BuildRequires: curl-devel jpeg-devel png-devel bzip2-devel ImageMagick
 BuildRequires: lua-devel sqlite3-devel
