@@ -1,16 +1,14 @@
 %define name xmoto
-%define version 0.3.4
+%define version 0.4.0
 %define release %mkrel 1
 
 Summary: A challenging 2D motocross platform game
 Name: %{name}
 Version: %{version}
 Release: %{release}
-Source0: http://download.tuxfamily.org/xmoto/xmoto/%{version}/%{name}-%{version}-src.tar.bz2
+Source0: http://download.tuxfamily.org/xmoto/xmoto/%{version}/%{name}-%{version}-src.tar.gz
 Source1: %{name}.png
-# (blino) allow to override localedir
-Patch1: xmoto-0.2.2-locale.patch
-License: GPL
+License: GPLv2+
 Group: Games/Arcade
 Url: http://xmoto.sourceforge.net/
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
@@ -29,7 +27,6 @@ compete with yourself and others, racing against the clock.
 
 %prep
 %setup -q
-%patch1 -p1 -b .locale
 
 %build
 %configure \
@@ -80,5 +77,3 @@ rm -rf $RPM_BUILD_ROOT
 %{_liconsdir}/%{name}.png
 %{_miconsdir}/%{name}.png
 %{_mandir}/mang/*
-
-
