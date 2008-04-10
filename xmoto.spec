@@ -76,4 +76,4 @@ rm -rf $RPM_BUILD_ROOT
 %{_iconsdir}/%{name}.png
 %{_liconsdir}/%{name}.png
 %{_miconsdir}/%{name}.png
-%{_mandir}/mang/*
+%{_mandir}/man6/*
