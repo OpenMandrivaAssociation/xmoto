@@ -1,6 +1,6 @@
 %define name xmoto
 %define version 0.4.2
-%define release %mkrel 2
+%define release %mkrel 3
 
 Summary: A challenging 2D motocross platform game
 Name: %{name}
