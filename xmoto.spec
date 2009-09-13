@@ -1,13 +1,12 @@
 Summary:	A challenging 2D motocross platform game
 Name:		xmoto
-Version:	0.5.1
+Version:	0.5.2
 Release:	%mkrel 1
 License:	GPLv2+
 Group:		Games/Arcade
 Url:		http://xmoto.sourceforge.net/
 Source0:	http://download.tuxfamily.org/xmoto/xmoto/%{version}/%{name}-%{version}-src.tar.gz
 Source1:	%{name}.png
-Patch0:		xmoto-0.5.1-gcc44.patch
 BuildRequires:	mesaglu-devel
 BuildRequires:	ode-devel
 BuildRequires:	SDL-devel
@@ -34,7 +33,6 @@ compete with yourself and others, racing against the clock.
 
 %prep
 %setup -q
-%patch0 -p1 -b .gcc44
 
 %build
 %configure2_5x \
