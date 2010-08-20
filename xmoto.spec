@@ -21,6 +21,7 @@ BuildRequires:	imagemagick
 BuildRequires:	lua-devel
 BuildRequires:	sqlite3-devel
 BuildRequires:	bison
+BuildRequires:	xdg-basedir-devel
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
