@@ -1,7 +1,7 @@
 Summary:	A challenging 2D motocross platform game
 Name:		xmoto
-Version:	0.5.3
-Release:	%mkrel 2
+Version:	0.5.5
+Release:	%mkrel 1
 License:	GPLv2+
 Group:		Games/Arcade
 Url:		http://xmoto.sourceforge.net/
