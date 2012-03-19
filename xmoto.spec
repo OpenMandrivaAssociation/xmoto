@@ -1,7 +1,7 @@
 Summary:	A challenging 2D motocross platform game
 Name:		xmoto
-Version:	0.5.5
-Release:	%mkrel 1
+Version:	0.5.9
+Release:	1
 License:	GPLv2+
 Group:		Games/Arcade
 Url:		http://xmoto.sourceforge.net/
@@ -22,6 +22,7 @@ BuildRequires:	lua-devel
 BuildRequires:	sqlite3-devel
 BuildRequires:	bison
 BuildRequires:	xdg-basedir-devel
+BuildRequires:	libxml2-devel
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
