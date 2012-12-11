@@ -1,0 +1,11 @@
+diff -upsrc/helpers/Environment.cpp.fix src/helpers/Environment.cpp
+--- src/helpers/Environment.cpp.string.h	
++++ src/helpers/Environment.cpp	
+@@ -21,6 +21,7 @@
+ #include "Environment.h"
+ #include "VExcept.h"
+ #include <cstdlib>
++#include <string.h>
+ #ifdef WIN32
+ #include <windows.h>
+ #include <winbase.h>

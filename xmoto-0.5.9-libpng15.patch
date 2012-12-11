@@ -1,0 +1,11 @@
+diff -up src/image/tim_png.cpp.fix src/image/tim_png.cpp
+--- src/image/tim_png.cpp.zlib.h	
++++ src/image/tim_png.cpp	
+@@ -24,6 +24,7 @@
+  */
+ #include <stdio.h>
+ #include <string.h>
++#include <zlib.h>
+ #include "tim.h"
+ #include "png.h"
+ 

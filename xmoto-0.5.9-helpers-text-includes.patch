@@ -1,0 +1,5 @@
+diff -up src/helpers/Text.cpp.fix src/helpers/Text.cpp
+--- src/helpers/Text.cpp.cstdio	
++++ src/helpers/Text.cpp	
+@@ -21,0 +22 @@
++#include <cstdio>

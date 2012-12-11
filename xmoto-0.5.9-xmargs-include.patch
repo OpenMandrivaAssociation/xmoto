@@ -1,0 +1,5 @@
+diff -up src/XMArgs.cpp.fix src/XMArgs.cpp
+--- src/XMArgs.cpp.cstdio	
++++ src/XMArgs.cpp	
+@@ -26,0 +27 @@
++#include <cstdio>

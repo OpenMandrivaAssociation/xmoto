@@ -1,0 +1,11 @@
+diff -up src/helpers/System.cpp.fix src/helpers/System.cpp
+--- src/helpers/System.cpp.unistd	
++++ src/helpers/System.cpp	
+@@ -24,6 +24,7 @@
+ #include "Log.h"
+ #include "VExcept.h"
+ #include <sstream>
++#include <unistd.h>
+ 
+ std::vector<std::string>* System::getDisplayModes(int windowed) {
+     std::vector<std::string>* modes = new std::vector<std::string>;

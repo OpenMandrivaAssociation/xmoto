@@ -1,0 +1,5 @@
+diff -up src/helpers/Log.cpp.fix src/helpers/Log.cpp
+--- src/helpers/Log.cpp.cstdio	
++++ src/helpers/Log.cpp	
+@@ -25,0 +26 @@
++#include <cstdio>

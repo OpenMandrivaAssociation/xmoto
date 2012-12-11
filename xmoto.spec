@@ -1,29 +1,37 @@
 Summary:	A challenging 2D motocross platform game
 Name:		xmoto
-Version:	0.5.9
-Release:	1
-License:	GPLv2+
+Version:		0.5.10
+Release:		1
+License:		GPLv2+
 Group:		Games/Arcade
 Url:		http://xmoto.sourceforge.net/
-Source0:	http://download.tuxfamily.org/xmoto/xmoto/%{version}/%{name}-%{version}-src.tar.gz
-Source1:	%{name}.png
-BuildRequires:	mesaglu-devel
-BuildRequires:	ode-devel
-BuildRequires:	SDL-devel
-BuildRequires:	SDL_mixer-devel
-BuildRequires:	SDL_ttf-devel
-BuildRequires:	SDL_net-devel
-BuildRequires:	curl-devel
+Source0:		http://download.tuxfamily.org/xmoto/xmoto/%{version}/%{name}-%{version}-src.tar.gz
+Source1:		%{name}.png
+Patch0:		xmoto-0.5.9-Environment-cstlib.patch
+Patch1:		xmoto-0.5.9-Environment-string.patch
+Patch2:		xmoto-0.5.9-gcc4.7.patch
+Patch3:		xmoto-0.5.9-helpers-log-include.patch
+Patch4:		xmoto-0.5.9-helpers-text-includes.patch
+Patch5:		xmoto-0.5.9-libpng15.patch
+Patch6:		xmoto-0.5.9-xmargs-include.patch
+
+BuildRequires:	pkgconfig(glu)
+BuildRequires:	pkgconfig(ode)
+BuildRequires:	pkgconfig(sdl)
+BuildRequires:	pkgconfig(SDL_mixer)
+BuildRequires:	pkgconfig(SDL_ttf)
+BuildRequires:	pkgconfig(SDL_net)
+BuildRequires:	pkgconfig(libcurl)
 BuildRequires:	jpeg-devel
-BuildRequires:	png-devel
+BuildRequires:	pkgconfig(libpng15)
 BuildRequires:	bzip2-devel
 BuildRequires:	imagemagick
-BuildRequires:	lua-devel
-BuildRequires:	sqlite3-devel
+BuildRequires:	pkgconfig(lua)
+BuildRequires:	pkgconfig(sqlite3)
 BuildRequires:	bison
-BuildRequires:	xdg-basedir-devel
-BuildRequires:	libxml2-devel
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
+BuildRequires:	pkgconfig(libxdg-basedir)
+BuildRequires:  pkgconfig(libxml-2.0)
+
 
 %description
 X-Moto is a challenging 2D motocross platform game, where physics play
@@ -35,6 +43,15 @@ compete with yourself and others, racing against the clock.
 
 %prep
 %setup -q
+#individual file patch for better maintenance imported from MRB
+%patch0 -p0 
+%patch1 -p0
+%patch2 -p0
+%patch3 -p0
+%patch4 -p0
+#applied upstream
+#patch5 -p0
+%patch6 -p0
 
 %build
 %configure2_5x \
@@ -49,7 +66,6 @@ compete with yourself and others, racing against the clock.
 %make
 
 %install
-rm -rf %{buildroot}
 %makeinstall bindir=%{buildroot}%{_gamesbindir} datadir=%{buildroot}%{_gamesdatadir}
 
 mkdir -p %{buildroot}%{_datadir}/applications
@@ -71,8 +87,6 @@ convert -scale 16 %{SOURCE1} %{buildroot}%{_iconsdir}/hicolor/16x16/apps/%{name}
 
 %find_lang %{name}
 
-%clean
-rm -rf %{buildroot}
 
 %files -f %{name}.lang
 %defattr(-,root,root)
@@ -82,3 +96,4 @@ rm -rf %{buildroot}
 %{_datadir}/applications/mandriva-%{name}.desktop
 %{_iconsdir}/hicolor/*/apps/%{name}.png
 %{_mandir}/man6/*
+
