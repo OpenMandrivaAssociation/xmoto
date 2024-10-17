@@ -4,7 +4,7 @@ Version:		0.5.10
 Release:		2
 License:		GPLv2+
 Group:		Games/Arcade
-Url:		http://xmoto.sourceforge.net/
+Url:		https://xmoto.sourceforge.net/
 Source0:		http://download.tuxfamily.org/xmoto/xmoto/%{version}/%{name}-%{version}-src.tar.gz
 Source1:		%{name}.png
 Patch0:		xmoto-0.5.9-Environment-cstlib.patch
